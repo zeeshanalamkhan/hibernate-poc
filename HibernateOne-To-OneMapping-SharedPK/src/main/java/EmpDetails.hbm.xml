@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name=" com.hib.entities.EmpDetails" table="EMP_DETAILS">
+	<id name="empId" column="EMP_ID">
+	<generator class="foreign">
+		<param name="property">Employee</param>
+	</generator>
+	</id>
+	<property name="fname" column="FIRST_NAME"/>
+	<property name="lname" column="LAST_NAME"/>
+	<property name="mname" column="MIDDLE_NAME"/>
+	<one-to-one name="emp" class="com.hib.entities.Employee"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="com.zeeshan.entities.Student" table="Student">
+<id name="sId" type="integer" column="roll_no">
+	<!--  <generator class="sequence"><param name="sequence">std_id</param>
+	</generator>-->
+</id>
+<property name="sName" type="text" column="std_name"/>
+<property name="subject" type="text" column="subject"/>
+<property name="sAddress" type="text" column="s_address"/>
+<property name="email" type="text" column="email"/>
+<property name="mobNo" type="text" column="mobile"/>
+</class>
+</hibernate-mapping>

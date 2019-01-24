@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23 Dec, 2018 1:14:41 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.mapping.domain.Payment" table="PAYMENT">
+		<id name="paymentId" type="java.lang.Integer">
+			<column name="PAYMENTID" />
+			<generator class="assigned" />
+		</id>
+		<discriminator column="pmt" />
+		<property name="amount" type="java.lang.Double">
+			<column name="AMOUNT" />
+		</property>
+		<subclass name="com.mapping.domain.CreditCard"
+			discriminator-value="cc">
+			<property name="creditCardType" column="CCTYPE" />
+		</subclass>
+		<subclass name="com.mapping.domain.Cheque"
+			discriminator-value="cq">
+			<property name="chequeType" column="CHQTYPE" />
+		</subclass>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="com.hib.entities.Employee" table="EMPLOYEE">
+<id name="empId" column="EMP_ID">
+		<generator class="increment"/>
+	</id>
+	<property name="empName" column="EMP_NAME"/>
+	<property name="email" column="EMAILID"/>
+	<one-to-one name="empDetails" class="com.hib.entities.EmpDetails" cascade="all"/>
+</class>
+	
+</hibernate-mapping>

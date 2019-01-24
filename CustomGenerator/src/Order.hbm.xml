@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.custom.entities.Order" table="ORDER_DETAILS" >
+		<id name="orderId" column="O_ID">
+			<generator class="com.custom.generators.OrderIdGenerators"/>
+		</id>
+   <property name="orderBy" column="O_BY"/>
+   <property name="orderPrice" column="O_PRICE"/>
+	</class>
+</hibernate-mapping>

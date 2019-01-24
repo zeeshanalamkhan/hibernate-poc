@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 Dec, 2018 11:10:29 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.app.domain.Product" table="PRODUCTs">
+		<id name="productId" type="java.lang.Integer">
+			<column name="pid" />
+			<generator class="assigned" />
+		</id>
+		<version name="version" type="integer">
+			<column name="version" />
+		</version>
+		<property name="proName" type="java.lang.String">
+			<column name="pname" />
+		</property>
+		<property name="price" type="java.lang.Double">
+			<column name="PRICE" />
+		</property>
+	</class>
+</hibernate-mapping>

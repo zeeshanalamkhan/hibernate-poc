@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 3 May, 2019 5:16:33 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.zeeshan.pojo.Address" table="ADDRESS">
+		<id name="personId" type="int">
+			<generator class="foreign">
+				<param name="property">person</param>
+			</generator>
+		</id>
+		<property name="hNo">
+			<column name="HNO" />
+		</property>
+		<property name="city">
+			<column name="CITY" />
+		</property>
+		<one-to-one name="person" class="com.zeeshan.pojo.Person"></one-to-one>
+	</class>
+</hibernate-mapping>

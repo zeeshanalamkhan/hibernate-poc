@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 3 Sep, 2019 1:07:24 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.zeeshan.entity.Customer" table="CUSTOMER">
+		<id name="cId" type="java.lang.Integer" access="field">
+			<column name="CID" />
+			<generator class="assigned" />
+		</id>
+		<property name="cName" type="java.lang.String" access="field">
+			<column name="CNAME" />
+		</property>
+		<property name="forKey" type="java.lang.Integer" insert="false">
+			<column name="FORKEY" />
+		</property>
+	</class>
+</hibernate-mapping>
